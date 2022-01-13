@@ -1,0 +1,51 @@
+name: Seed Database
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  DATABASE_NAME: testing
+  DATABASE_USER: testing
+  DATABASE_PASS: testing
+  DATABASE_PORT: 5432
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14.1
+        env:
+          POSTGRES_USER: ${{ env.DATABASE_USER }}
+          POSTGRES_PASSWORD: ${{ env.DATABASE_PASS }}
+          POSTGRES_DB: ${{ env.DATABASE_NAME }}
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Seed the database
+        run: python seed_database.py
+        env:
+          DATABASE_HOST: localhost
+          DATABASE_NAME: ${{ env.DATABASE_NAME }}
+          DATABASE_USER: ${{ env.DATABASE_USER }}
+          DATABASE_PASS: ${{ env.DATABASE_PASS }}
+          DATABASE_PORT: ${{ env.DATABASE_PORT }}
