@@ -1,0 +1,29 @@
+name: Nightly Build
+on:
+  push:                # May want to have push and workflow_dispatch
+  workflow_dispatch:   # triggers to help with developing a scheduled workflow
+  schedule:
+    - cron: '17 6 * * *'
+jobs:
+  date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a tag for the archive
+        run: echo "::set-output name=TAG::$(date +%F)"
+        id: tag
+        
+      - name: Starting the nightly build for ${{ steps.tag.outputs.TAG }}
+        run: echo "The tag is ${{ steps.tag.outputs.TAG }}"
+        
+      - name: Check out the code
+        uses: actions/checkout@v2
+        
+      - name: Create the artifact
+        run: tar -cvf nightly-${{ steps.tag.outputs.TAG }}.tar ./*
+        
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v2
+        with:
+         name: nightly-${{ steps.tag.outputs.TAG }}.tar
+         path: nightly-${{ steps.tag.outputs.TAG }}.tar
+
