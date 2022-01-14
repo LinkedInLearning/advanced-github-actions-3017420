@@ -15,7 +15,7 @@ Use these files to test a composite action.
     YOUR_GITHUB_USER_NAME
     YOUR_COMPOSITE_ACTION_REPO_NAME
     ```
-1. If your username is `octocat` and the comosite repo name is `awesome-action`, your `composite-action-workflow.yml` should now include a line as follows:
+1. If your username is `octocat` and the composite repo name is `awesome-action`, your `composite-action-workflow.yml` should now include a line as follows:
     ```
     uses: octocat/awesome-action@main
     ```
