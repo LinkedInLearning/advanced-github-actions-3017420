@@ -1,0 +1,55 @@
+name: Standard Python Steps
+description: Runs the standard steps for Python
+inputs:
+  PYTHON_VERSION:
+    description: The version of Python to use
+    required: true
+    default: 3.x
+  RUN_UNIT_TESTS:
+    description: Set to true to run unit tests
+    required: false
+    default: false
+outputs:
+  PROJECT_FILES:
+    description: "The pattern used to match files in the project"
+    value: ${{ steps.project_files.outputs.files }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python ${{ inputs.PYTHON_VERSION }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ inputs.PYTHON_VERSION }}
+    
+    - name: Install requirements
+      run: |
+        pip install -r requirements.txt
+        pip install flake8
+        pip install pylint
+      shell: bash
+
+    - name: Identify project files
+      id: project_files
+      run: |
+        if [ -d "./tests" ];
+        then
+          echo "::set-output name=files::*.py tests/*.py"
+        else
+          echo "::set-output name=files::*.py"
+        fi        
+      shell: bash
+    
+    - name: flake8
+      run: flake8 --ignore=E501,E231 ${{ steps.project_files.outputs.files }}
+      shell: bash
+    
+    - name: pylint
+      run: pylint --errors-only --disable=C0301 --disable=C0326 ${{ steps.project_files.outputs.files }}
+      shell: bash
+
+    - name: unit tests
+      if: ${{ inputs.RUN_UNIT_TESTS }}
+      run: python -m unittest --verbose --failfast  
+      shell: bash
