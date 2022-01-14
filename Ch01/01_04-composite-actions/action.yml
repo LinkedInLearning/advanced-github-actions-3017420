@@ -50,6 +50,6 @@ runs:
       shell: bash
 
     - name: unit tests
-      if: ${{ inputs.RUN_UNIT_TESTS }}
+      if: ${{ inputs.RUN_UNIT_TESTS == false }}
       run: python -m unittest --verbose --failfast  
       shell: bash
