@@ -1,7 +1,9 @@
 # 01_04-composite-actions
 Use these files to test a composite action.
 
-1. Create TWO new repos: one to host the composite action and one to host the workflow that uses the action
+1. Create TWO new repos:
+    - one to host the composite action
+    - one to host the workflow that uses the action
 1. Upload the file `action.yml` into the root of the compsite action repo.
 1. Upload the following files into the root of the workflow repo:
     ```
