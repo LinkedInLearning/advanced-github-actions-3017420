@@ -1,4 +1,4 @@
-# 01-04-composite-actions-the-workflow
+# 01_04-composite-actions
 Use these file to test a composite action.
 
 1. Create TWO new repos: one to host the composite action and one to host the workflow that uses the action
