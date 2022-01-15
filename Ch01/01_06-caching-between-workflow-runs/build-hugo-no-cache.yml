@@ -1,4 +1,4 @@
-name: Build Hugo No Cache
+name: Build Hugo - NO CACHE
 on:
   workflow_dispatch:
 jobs:
