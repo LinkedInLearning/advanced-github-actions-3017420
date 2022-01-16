@@ -1,0 +1,20 @@
+name: Deploy to Production
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  development:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Deploy to the development environment
+        run: echo "Insert deployment steps below..."
+
+  production:
+    runs-on: ubuntu-latest
+    environment: production
+    needs: development
+    steps:
+      - name: Deploy to the production environment
+        run: echo "Insert deployment steps below..."
