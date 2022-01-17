@@ -1,6 +1,5 @@
 name: Matrix with Node.js
 on:
-  push:
   workflow_dispatch:
 jobs:
   build:
@@ -18,4 +17,3 @@ jobs:
     - run: npm install
     - name: Running on Platform = ${{ matrix.platform }} Node = ${{ matrix.version }}
       run: npm test
-
