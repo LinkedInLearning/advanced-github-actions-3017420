@@ -1,6 +1,5 @@
 name: Build Hugo - NO CACHE
 on:
-  push:
   workflow_dispatch:
 jobs:
   build:
