@@ -7,5 +7,5 @@ Use these files to demonstrate running a job with a matrix strategy.
 1. On the *Actions* tab, use the dispatch trigger to run the workflow.
 1. Wait until the workflow completes.
 1. Review the output of the workflow to see the combination of jobs.
-1. Review the output of a few jops to see how the matrix configurations for platform and node version were applied.
+1. Review the output of a few jobs to see how the matrix configurations for platform and node version were applied.
 1. Also, review the output of the test step to see the differences for each platform.
