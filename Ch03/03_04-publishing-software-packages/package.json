@@ -1,0 +1,18 @@
+{
+  "name": "@YOUR_GITHUB_USER_NAME_HERE/YOUR_GITHUB_REPO_NAME_HERE",
+    "version": "1.0.0",
+    "description": "this is a test",
+    "main": "index.js",
+    "publishConfig": {
+        "registry":"https://npm.pkg.github.com"
+    },
+    "scripts": {
+        "test": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YOUR_GITHUB_USER_NAME_HERE/YOUR_GITHUB_REPO_NAME_HERE.git"
+    },
+    "author": "",
+    "license": "ISC"
+}
