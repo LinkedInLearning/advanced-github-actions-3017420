@@ -16,6 +16,6 @@ Use these files to demonstrate publishing a software package to the GitHub Packa
 1. Click **Choose a tag**.  Enter `v1.0.0` and click **Create a new tag: v1.0.0 on publish**.
 1. Give the release a title and a description.  Click **Publish release**.
 1. Go to the **Actions** tab to confirm the workflow has started.  Wait for the workflow to complete.
-1. Go to the **Code** tab and look for the package under the **Packages** section on the lower right hand side of the screen. Note that it may take a few moments for the package to appear.  Also, you may need to refresh the screen to see the newly published package.
+1. Go to the **Code** tab and look for the package under the **Packages** section on the right hand side of the screen. Note that it may take a few minutes for the package to appear.  Also, you may need to refresh the screen to see the newly published package.
 1. Click the package name. Review the package details.
 
