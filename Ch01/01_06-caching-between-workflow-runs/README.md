@@ -8,7 +8,7 @@ Use these files to demonstrate caching between workflow runs.
     build-hugo-no-cache.yml
     build-hugo-with-cache.yml
     ```
-1. On the *Actions* tab, use the dispatch trigger to run each workflow.
+1. On the **Actions** tab, use the dispatch trigger to run each workflow.
 1. Wait until the workflows complete.  Make a note of the time it took the worflows to run.
 1. Re-run each workflow using the dispatch trigger.
 1. Compare the new runtime of each workflow. The runtime for the cached workflow should be reduced in comparision to its previous run.

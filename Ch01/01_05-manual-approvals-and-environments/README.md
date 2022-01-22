@@ -6,7 +6,7 @@ Use these files to test a manual deployment using environments protection rules.
 2. Add the files from this directory to the root of the new repo.
 3. Move the file `manual-approval.yml` into the `.github/workflows` directory in the new repo.
 4. Once the file is commited, the workflow should be triggered by a `push` event.
-5. Confirm the workflow runs as expected and includes output for two jobs, *development* and *production*.
+5. Confirm the workflow runs as expected and includes output for two jobs, **development** and **production**.
 
 ## Add a Reviewer and a Manual Approval
 1. Modify the repo settings.  Go to: `Settings` -> `Environments` -> `production`.

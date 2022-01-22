@@ -11,7 +11,7 @@ Use the following steps to get started:
 1. Create a new repo.
 1. Add the files from this directory to the root of the new repo.
 1. Move the `python-workflow.yml` file into the `.github/workflows` directory in the new repo.
-1. Check the *Actions* tab.  The workflow has a push trigger so it should have run after the workflow file was committed.  The workflow also has a dispatch trigger that you can use to run the workflow without modifying any files.
+1. Check the **Actions** tab.  The workflow has a push trigger so it should have run after the workflow file was committed.  The workflow also has a dispatch trigger that you can use to run the workflow without modifying any files.
 1. Edit the workflow file and add a matrix strategy. You'll know where to add it.
 1. Add matrix keys for `platform` and `version`.
 1. Update the `runs-on` configuration to use the matrix context for `platform`.
