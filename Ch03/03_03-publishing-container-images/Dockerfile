@@ -1,5 +1,4 @@
 FROM python:3-alpine
-LABEL org.opencontainers.image.source=https://github.com/console6500/github-container-registry-demo
 
 RUN apk add --update \
         bash \
