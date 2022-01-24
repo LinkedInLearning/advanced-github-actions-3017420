@@ -17,4 +17,3 @@ Use these steps to solve the challenge:
 1. Go the the **Actions** tab in the repo and select the `Test Project Alpha Runner` workflow.
 1. Trigger the workflow using the dispatch trigger.
 1. Confirm that the workflow completes and runs on the `project-alpha` runner.
-    - **NOTE** the provided workflow uses a `run` step with the `echo` command.  If you are using a runner that does not support `echo`, you will need to replace that step with a command of your choice that is more appropriate for your runner.

@@ -1,4 +1,4 @@
-name: Connect to Service on Self Hosted Runner
+name: Self Hosted Runner
 
 on:
   workflow_dispatch:
