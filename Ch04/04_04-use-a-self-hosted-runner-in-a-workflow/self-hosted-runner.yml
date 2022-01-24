@@ -1,0 +1,14 @@
+name: Connect to Service on Self Hosted Runner
+
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Set the script to executable
+        run: chmod +x ./connect-to-internal-service.py
+      - name: Run the script
+        run: ./connect-to-internal-service.py
