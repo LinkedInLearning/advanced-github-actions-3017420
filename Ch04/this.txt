@@ -1,0 +1,3 @@
+mv 04_05-challenge-deploy-and-register-a-self-hosted-runner 04_05-challenge-configure-a-self-hosted-runner-with-a-label
+mv 04_06-solution-deploy-and-register-a-self-hosted-runner 04_06-solution-configure-a-self-hosted-runner-with-a-label
+
