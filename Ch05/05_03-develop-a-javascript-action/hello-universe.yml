@@ -9,4 +9,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: YOUR_USER_NAME/YOUR_REPO_NAME@main
+      - uses: YOUR_GITHUB_USER_NAME/YOUR_GITHUB_REPO_NAME@main
