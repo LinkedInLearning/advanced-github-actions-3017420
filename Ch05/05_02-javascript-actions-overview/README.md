@@ -14,13 +14,14 @@ Use the following tips and references to get set up to develop a JavaScript acti
     ```
 1. Intialize your project:
     ```
-    npm init
+    npm init --yes
     ```
 1. Install the `@actions/core` and `@actions/github` libraries as dependencies:
     ```
     npm install @actions/core
     npm install @actions/github
     ```
+1. Edit the `.gitignore` file and remove the line with `dist`.
 
 # Documentation
 - [Creating a JavaScript Action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)
