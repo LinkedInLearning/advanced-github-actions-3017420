@@ -17,7 +17,7 @@ Use these files to test a JavaScript action.
 1. Once the workflow file is commited, the workflow should be triggered by a `push` event.
 1. Confirm the `Hello Universe` workflow runs as expected and includes the output `Hello, Universe!`.
 
-## From Your Terminal...
+## From Your Local System...
 1. Create a new repo and clone it to your local system.
 1. Add the exercise files to the root of the new repo.  Be sure to add the file named `.gitignore`  but note that it may be hidden.
 1. **NOTE:** The `.gitignore` file from the previous step needs to be in place for the following reasons:
