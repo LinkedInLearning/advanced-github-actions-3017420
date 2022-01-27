@@ -8457,14 +8457,12 @@ async function main() {
     const { context } = __nccwpck_require__(5493)
 
     // log the context
-    console.log({ context });
+    console.log( JSON.stringify(context.payload, null, "    ") );
 
     // see if the payload has an action (push events don't have an action)
     if (!context.payload.action) {
         core.warning("This action should only be used with pull requests.");
         return;
-    } else {
-        const { pull_request } = context.payload;
     }
 
     // if this pull request is being opened for the first time,
@@ -8478,7 +8476,7 @@ async function main() {
         await octokit.rest.issues.createComment({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            issue_number: pull_request.number,
+            issue_number: context.payload.number,
             body: 'Thank you for submitting a pull request! We will try to review this as soon as we can.'
         });
 
@@ -8486,7 +8484,7 @@ async function main() {
         await octokit.rest.issues.addLabels({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            issue_number: pull_request.number,
+            issue_number: context.payload.number,
             labels: ['acknowledged']
         })
     } else {
