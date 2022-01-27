@@ -23,5 +23,5 @@ Use the following tips and references to get set up to develop a JavaScript acti
     ```
 1. Edit the `.gitignore` file and remove the line with `dist`.
 
-# Documentation
+## Resources    
 - [Creating a JavaScript Action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)
