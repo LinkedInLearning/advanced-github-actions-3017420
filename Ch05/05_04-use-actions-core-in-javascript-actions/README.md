@@ -1,5 +1,5 @@
 # 05_04-use-actions-core-in-javascript-actions
-Use these files to test a JavaScript action that uses the @action/core pacakge for:
+Use these files to test a JavaScript action that uses the @actions/core pacakge for:
 - Reading action inputs
 - Printing an info log
 - Creating notice, warning, and error annotations
