@@ -19,10 +19,11 @@ Use these files to test a JavaScript action that uses the @action/core pacakge f
 1. **NOTE:** The previous step is key for the workflow to complete successfully.
 1. Once the workflow file is commited, the workflow should be triggered by a `push` event.
 1. Confirm the `Hello Universe` workflow runs as expected and includes:
-    - an info statement with "testing testing 1 2 3"
     - a `Notice` annotation
     - a `Warning` annotation
     - an `Error` annotation
+    - logs with an info statement reading "testing testing 1 2 3"
+    - logs for each of the annotations
 
 ## From Your Local System...
 1. Create a new repo and clone it to your local system.
@@ -49,8 +50,9 @@ Use these files to test a JavaScript action that uses the @action/core pacakge f
 1. Commit the changes and push them to your repo.
 1. Once the commit is pushed, the workflow should be triggered by a `push` event.
 1. Confirm the `Hello Universe` workflow runs as expected and includes:
-    - an info statement with "testing testing 1 2 3"
     - a `Notice` annotation
     - a `Warning` annotation
     - an `Error` annotation
+    - logs with an info statement reading "testing testing 1 2 3"
+    - logs for each of the annotations
 
