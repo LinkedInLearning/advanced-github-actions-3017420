@@ -1,0 +1,22 @@
+name: 'Hello Universe'
+description: 'This action welcomes the user to the GitHub Universe'
+inputs:
+  GITHUB_TOKEN:
+    description: 'This is the GitHub token that lets the action authenticate'
+    required: true
+  input_1:
+    description: 'This is the first input; it is required and does not have a default'
+    required: true
+  input_2:
+    description: 'This is the second input; it is not required and has a default'
+    required: false
+    default: 'The default value'
+outputs:
+  output_1:
+    description: 'This is the first output'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'zap'
+  color: 'yellow'
