@@ -3,7 +3,7 @@ on:
   push:                # May want to have push and workflow_dispatch
   workflow_dispatch:   # triggers to help with developing a scheduled workflow
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '*/20 * * * *'
 jobs:
   date:
     runs-on: ubuntu-latest
