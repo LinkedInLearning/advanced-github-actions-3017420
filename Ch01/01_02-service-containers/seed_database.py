@@ -4,7 +4,7 @@ and generates 100 rows of data in the table.
 
 Configuration for connecting to the target Postgres DB should be given
 as environment variables including database name, user, password, port,
-and the name of the host where the database is running.
+and the name of the host where the database is running...
 '''
 import os
 import sys
